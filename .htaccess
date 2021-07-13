@@ -1,0 +1,17 @@
+errorDocument 400 http://www.destinybasket.com/404
+errorDocument 401 http://www.destinybasket.com/404
+errorDocument 403 http://www.destinybasket.com/404
+errorDocument 500 http://www.destinybasket.com/404
+
+Options +MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+# Disable Directory Browsing
+Options All -Indexes
+
+
+
